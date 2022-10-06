@@ -9,19 +9,26 @@ body{
   justify-content: center;
   align-items: center;
 }
-output{
+.input{
   position: absolute;
   background-color: black;
   color: white;
   text-align:right;
   padding-right: 5px;
   height: 5vh;
-  width: 20vw;
+  width: calc(20vw - 5px);
   top: 1vh;
   bottom:1vh;
   font-size: 32px;
-  right: 7px;
-  border-top: 2px solid navy;
+  right: calc(0.5vw + 1.5px);
+  outline: 2px groove;
+  outline-color: rgba(67, 110, 140, 0.91);
+  outline-width:medium;
+}
+.output{
+  position: absolute;
+  top:0;
+  color: red;
 }
 button{
   margin: 0;
@@ -41,6 +48,9 @@ button:hover{
   height: 38vh;
   position: relative;
   background-color: silver;
+  outline: 2px groove;
+  outline-color: rgba(66, 84, 96, 0.91);
+  outline-width:thick;
 }
 #first-row, #second-row, #third-row, #fourth-row{
   font-size: 0;
@@ -53,11 +63,8 @@ button:hover{
 #equals{
   height: 12vh;
   width: 5vw;
-  position: absolute;
-  bottom: 0vh;
-  left: 223px;
-}
-.equals{
+  position: fixed;
+  top: 56vh;
   background-color: rgba(13, 128, 208, 0.91);
 }
 .number{
@@ -71,13 +78,12 @@ button:hover{
   position: relative;
   height: 6vh;
   width: 10vw;
-}
-.clear{
   background-color: rgba(248, 32, 49, 0.91);
   color: black;
   border-left: 2px solid black;
   border-top: 2px solid black;
 }
+
 .operator{
   height: 6vh;
   width: 5vw;
@@ -88,8 +94,6 @@ button:hover{
   height: 6vh;
   width: 10vw;
   position: relative;
-}
-.zero{
   background-color: rgba(9, 9, 8, 0.72);
   color: white;
   border-left: 2px solid black;
